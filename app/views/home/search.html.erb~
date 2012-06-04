@@ -1,0 +1,15 @@
+<% if @faq.present? %>
+
+     <table border="1">
+        
+        <tr>
+            <%  @faq.each do |f| %>
+            <td><%= link_to f.subject, "/knowlwedgebase/detail/#{f.id}" %></td>
+           
+           <% end %>           
+        </tr>
+ 	
+        </table>
+    <% else %>
+        <p> NOT AVAILABLE </p>
+    <% end %>
